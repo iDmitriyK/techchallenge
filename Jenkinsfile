@@ -2,13 +2,14 @@ pipeline {
     agent any
   stages {
     stage('Checkout') {
-      step {
+      steps {
         chesckout scm
       }
     }
-    dir('helloreact') {
-      stage('Build') {
-        steps {
+    
+    stage('Build') {
+      steps {
+        dir('helloreact') {
           sh 'npm install'
           sh 'npm build'
         }
