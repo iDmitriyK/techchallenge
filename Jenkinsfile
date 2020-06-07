@@ -8,10 +8,8 @@ pipeline {
     }
     dir('helloreact') {
       stage('Build') {
-        step {
+        steps {
           sh 'npm install'
-        }
-        step {
           sh 'npm build'
         }
       }
