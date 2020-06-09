@@ -13,11 +13,7 @@ pipeline {
     }
     stage('Stop Docker Image') {
       steps {
-        sh """
-if [ ! "$(docker ps -q -f name=helloreact)" ]; then
-    docker stop helloreact
-fi
-"""
+        sh "if [ ! \"$(docker ps -q -f name=helloreact)\" ]; then docker stop helloreact fi"
       }
     }
     stage('Run latest') {
