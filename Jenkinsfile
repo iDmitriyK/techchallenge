@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Stop Docker Image') {
       steps {
-        sh "docker stop helloreact"
+        sh "docker stop helloreact || true"
       }
     }
     stage('Run latest') {
