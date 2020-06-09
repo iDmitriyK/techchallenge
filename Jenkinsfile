@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Run latest') {
       steps {
-        sh "docker run -rm -d -p 5000:5000 --name helloreact helloreact:1.0.${env.BUILD_NUMBER}"
+        sh "docker run -rm -d -p 3000:3000 --name helloreact helloreact:1.0.${env.BUILD_NUMBER}"
       }
     }
   }
