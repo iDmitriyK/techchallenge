@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Docker Build') {
       steps {
-        sh "docker build -f Dockerfile ./helloreact -t helloreact:1.0.${env.BUILD_NUMBER} -t helloreact:latest"
+        sh "docker build -f Dockerfile ./app -t helloreact:1.0.${env.BUILD_NUMBER} -t helloreact:latest"
       }
     }
     stage('Stop Docker Image') {
