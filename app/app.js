@@ -2,10 +2,10 @@ const http = require('http');
 http.createServer(function(request, response){
     response.setHeader("Content-Type", "text/html; charset=utf-8;");
     switch(request.url) {
-        case '/will_returning':
+        case '/will':
             response.write("{data: 'Hello World'}");
             break;
-        case '/ready_returning':
+        case '/ready':
             response.write("{data: 'It works!'}");
             break;
         default:
