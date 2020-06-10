@@ -1,4 +1,3 @@
 # techchallenge
 
 hello
-test
